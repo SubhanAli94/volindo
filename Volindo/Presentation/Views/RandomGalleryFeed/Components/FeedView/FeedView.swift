@@ -11,7 +11,7 @@ struct FeedView: View {
             ProgressView("Loading...")
         } else if let error = viewModel.errorMessage {
             VStack {
-                Text("Error: \(error)")
+                Text(error)
                     .foregroundColor(.red)
                     .multilineTextAlignment(.center)
                     .padding()
