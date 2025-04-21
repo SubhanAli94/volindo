@@ -2,12 +2,12 @@
 //  VolindoUITestsLaunchTests.swift
 //  VolindoUITests
 //
-//  Created by Subhan Ali on 16/04/2025.
+//  Created by Usman Ali on 22/04/2025.
 //
 
 import XCTest
 
-final class Instagram_CloneUITestsLaunchTests: XCTestCase {
+final class VolindoUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
