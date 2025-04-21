@@ -78,11 +78,6 @@ class RandomGalleryFeedViewModel: ObservableObject {
             self.visiblePostIDs = Set(visibleIDs)
         }
     }
-    
-    func shouldLoadMore(currentItem: PostResponse) -> Bool {
-        guard let index = posts.firstIndex(where: { $0.id == currentItem.id }) else { return false }
-        return index >= posts.count - 5
-    }
 }
 
 extension RandomGalleryFeedViewModel {
