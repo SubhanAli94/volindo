@@ -16,6 +16,7 @@ final class PlaybackManager: ObservableObject {
     deinit {
         cancellables.forEach { $0.cancel() }
     }
+    
 
     func register(id: UUID, player: AVPlayer) {
         playerQueue.async { [weak self] in
@@ -69,7 +70,9 @@ final class PlaybackManager: ObservableObject {
     private func playPlayer(for id: UUID) {
         guard let player = players[id] else { return }
         DispatchQueue.main.async {
-            player.play()
+            if player.timeControlStatus != .playing {
+                player.play()
+            }
             player.isMuted = false
         }
     }
@@ -77,7 +80,9 @@ final class PlaybackManager: ObservableObject {
     private func pausePlayer(for id: UUID) {
         guard let player = players[id] else { return }
         DispatchQueue.main.async {
-            player.pause()
+            if player.timeControlStatus == .playing {
+                player.pause()
+            }
         }
     }
 }
