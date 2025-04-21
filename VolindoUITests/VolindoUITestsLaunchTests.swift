@@ -1,10 +1,3 @@
-//
-//  VolindoUITestsLaunchTests.swift
-//  VolindoUITests
-//
-//  Created by Usman Ali on 22/04/2025.
-//
-
 import XCTest
 
 final class VolindoUITestsLaunchTests: XCTestCase {

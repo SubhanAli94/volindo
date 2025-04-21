@@ -11,7 +11,7 @@ struct StoryListView: View {
             LazyHStack(spacing: 16){
                 VStack(alignment: .center){
                     ZStack(alignment: .bottomTrailing) {
-                        Image("lion") // Replace with your asset name
+                        Image("lion")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 78, height: 78)

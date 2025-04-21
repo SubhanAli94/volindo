@@ -13,14 +13,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		34AF75F22DAF013300633446 /* PBXContainerItemProxy */ = {
+		342FEB3B2DB6F5F300678857 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34AF75D82DAF013100633446 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 34AF75DF2DAF013100633446;
-			remoteInfo = "Instagram-Clone";
+			remoteInfo = Volindo;
 		};
-		34AF75FC2DAF013300633446 /* PBXContainerItemProxy */ = {
+		34AF75F22DAF013300633446 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34AF75D82DAF013100633446 /* Project object */;
 			proxyType = 1;
@@ -30,12 +30,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		342FEB352DB6F5F200678857 /* VolindoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolindoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AF75E02DAF013100633446 /* Volindo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volindo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AF75F12DAF013300633446 /* VolindoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolindoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34AF75FB2DAF013300633446 /* VolindoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolindoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		342FEB432DB6F87E00678857 /* Exceptions for "Volindo" folder in "VolindoUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/AccessibilityIdentifiers.swift,
+			);
+			target = 342FEB342DB6F5F200678857 /* VolindoUITests */;
+		};
 		34AF76142DAF0E0700633446 /* Exceptions for "Volindo" folder in "Volindo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -57,11 +64,17 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		342FEB362DB6F5F200678857 /* VolindoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VolindoUITests;
+			sourceTree = "<group>";
+		};
 		34AF75E22DAF013100633446 /* Volindo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				34AF76142DAF0E0700633446 /* Exceptions for "Volindo" folder in "Volindo" target */,
 				34BC49222DB3AD9500D68255 /* Exceptions for "Volindo" folder in "Compile Sources" phase from "Volindo" target */,
+				342FEB432DB6F87E00678857 /* Exceptions for "Volindo" folder in "VolindoUITests" target */,
 			);
 			path = Volindo;
 			sourceTree = "<group>";
@@ -71,14 +84,16 @@
 			path = VolindoTests;
 			sourceTree = "<group>";
 		};
-		34AF75FE2DAF013300633446 /* VolindoUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VolindoUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		342FEB322DB6F5F200678857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34AF75DD2DAF013100633446 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,13 +111,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34AF75F82DAF013300633446 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,7 +119,7 @@
 			children = (
 				34AF75E22DAF013100633446 /* Volindo */,
 				34AF75F42DAF013300633446 /* VolindoTests */,
-				34AF75FE2DAF013300633446 /* VolindoUITests */,
+				342FEB362DB6F5F200678857 /* VolindoUITests */,
 				34BC49D52DB3E07500D68255 /* Frameworks */,
 				34AF75E12DAF013100633446 /* Products */,
 			);
@@ -122,7 +130,7 @@
 			children = (
 				34AF75E02DAF013100633446 /* Volindo.app */,
 				34AF75F12DAF013300633446 /* VolindoTests.xctest */,
-				34AF75FB2DAF013300633446 /* VolindoUITests.xctest */,
+				342FEB352DB6F5F200678857 /* VolindoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +145,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		342FEB342DB6F5F200678857 /* VolindoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 342FEB3D2DB6F5F300678857 /* Build configuration list for PBXNativeTarget "VolindoUITests" */;
+			buildPhases = (
+				342FEB312DB6F5F200678857 /* Sources */,
+				342FEB322DB6F5F200678857 /* Frameworks */,
+				342FEB332DB6F5F200678857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				342FEB3C2DB6F5F300678857 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				342FEB362DB6F5F200678857 /* VolindoUITests */,
+			);
+			name = VolindoUITests;
+			packageProductDependencies = (
+			);
+			productName = VolindoUITests;
+			productReference = 342FEB352DB6F5F200678857 /* VolindoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		34AF75DF2DAF013100633446 /* Volindo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34AF76052DAF013300633446 /* Build configuration list for PBXNativeTarget "Volindo" */;
@@ -185,29 +216,6 @@
 			productReference = 34AF75F12DAF013300633446 /* VolindoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		34AF75FA2DAF013300633446 /* VolindoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 34AF760B2DAF013300633446 /* Build configuration list for PBXNativeTarget "VolindoUITests" */;
-			buildPhases = (
-				34AF75F72DAF013300633446 /* Sources */,
-				34AF75F82DAF013300633446 /* Frameworks */,
-				34AF75F92DAF013300633446 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				34AF75FD2DAF013300633446 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				34AF75FE2DAF013300633446 /* VolindoUITests */,
-			);
-			name = VolindoUITests;
-			packageProductDependencies = (
-			);
-			productName = "Instagram-CloneUITests";
-			productReference = 34AF75FB2DAF013300633446 /* VolindoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,14 +226,14 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					342FEB342DB6F5F200678857 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 34AF75DF2DAF013100633446;
+					};
 					34AF75DF2DAF013100633446 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 					34AF75F02DAF013300633446 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 34AF75DF2DAF013100633446;
-					};
-					34AF75FA2DAF013300633446 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 34AF75DF2DAF013100633446;
 					};
@@ -252,12 +260,19 @@
 			targets = (
 				34AF75DF2DAF013100633446 /* Volindo */,
 				34AF75F02DAF013300633446 /* VolindoTests */,
-				34AF75FA2DAF013300633446 /* VolindoUITests */,
+				342FEB342DB6F5F200678857 /* VolindoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		342FEB332DB6F5F200678857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34AF75DE2DAF013100633446 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,16 +287,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34AF75F92DAF013300633446 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		342FEB312DB6F5F200678857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		34AF75DC2DAF013100633446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,29 +311,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34AF75F72DAF013300633446 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		342FEB3C2DB6F5F300678857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34AF75DF2DAF013100633446 /* Volindo */;
+			targetProxy = 342FEB3B2DB6F5F300678857 /* PBXContainerItemProxy */;
+		};
 		34AF75F32DAF013300633446 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 34AF75DF2DAF013100633446 /* Volindo */;
 			targetProxy = 34AF75F22DAF013300633446 /* PBXContainerItemProxy */;
 		};
-		34AF75FD2DAF013300633446 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 34AF75DF2DAF013100633446 /* Volindo */;
-			targetProxy = 34AF75FC2DAF013300633446 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		342FEB3E2DB6F5F300678857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDP35T5ZDL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.volindo.VolindoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Volindo;
+			};
+			name = Debug;
+		};
+		342FEB3F2DB6F5F300678857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JDP35T5ZDL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.volindo.VolindoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Volindo;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		34AF76032DAF013300633446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,53 +614,18 @@
 			};
 			name = Release;
 		};
-		34AF760C2DAF013300633446 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JDP35T5ZDL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.volindo.Instagram-CloneUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = "Instagram-Clone";
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		34AF760D2DAF013300633446 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JDP35T5ZDL;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.volindo.Instagram-CloneUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = "Instagram-Clone";
-				XROS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		342FEB3D2DB6F5F300678857 /* Build configuration list for PBXNativeTarget "VolindoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				342FEB3E2DB6F5F300678857 /* Debug */,
+				342FEB3F2DB6F5F300678857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		34AF75DB2DAF013100633446 /* Build configuration list for PBXProject "Volindo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -637,15 +649,6 @@
 			buildConfigurations = (
 				34AF76092DAF013300633446 /* Debug */,
 				34AF760A2DAF013300633446 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		34AF760B2DAF013300633446 /* Build configuration list for PBXNativeTarget "VolindoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				34AF760C2DAF013300633446 /* Debug */,
-				34AF760D2DAF013300633446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

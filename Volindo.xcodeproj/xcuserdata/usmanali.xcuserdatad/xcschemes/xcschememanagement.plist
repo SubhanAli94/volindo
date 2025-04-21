@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Sample-iOS (Playground).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Volindo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,11 +22,21 @@
 		<key>VolindoTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>1</integer>
+		</dict>
+		<key>VolindoUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>342FEB342DB6F5F200678857</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>34AF75DF2DAF013100633446</key>
 		<dict>
 			<key>primary</key>

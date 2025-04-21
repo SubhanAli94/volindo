@@ -23,18 +23,22 @@ struct RandomGalleryFeedView: View {
             HStack(spacing: 6){
                 Text("Volindo")
                     .font(.CookieRegular(size: 38))
+                    .accessibilityIdentifier(AccessibilityIdentifiers.HeaderView.logoText)
                 
                 Image(systemName: "chevron.down")
                     .font(.system(size: 12, weight: .bold))
                     .padding(.top, 4)
+                    .accessibilityIdentifier(AccessibilityIdentifiers.HeaderView.chevronDown)
             }
             Spacer()
             HStack(spacing: 20){
                 Image(systemName: "heart")
                     .font(.system(size: 22))
+                    .accessibilityIdentifier(AccessibilityIdentifiers.HeaderView.heartIcon)
                 Image(systemName: "paperplane")
                     .font(.system(size: 22))
                     .rotationEffect(.degrees(15))
+                    .accessibilityIdentifier(AccessibilityIdentifiers.HeaderView.messageIcon)
             }
         }
         .padding(.horizontal, 16)

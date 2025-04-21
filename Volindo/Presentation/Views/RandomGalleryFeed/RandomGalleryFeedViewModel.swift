@@ -56,7 +56,7 @@ class RandomGalleryFeedViewModel: ObservableObject {
     }
     
     func fetchMoreItemsIfNeeded(currentId: String) {
-        guard let currentIndex = posts.firstIndex(where: { $0.id == currentId }) else {
+        guard let currentIndex = posts.lastIndex(where: { $0.id == currentId }) else {
             return
         }
         
