@@ -36,10 +36,6 @@ extension PostResponse{
             if let imageItem = mediaItems.first(where: { $0.type == .image }) {
                 formattedMediaItems.append(.image(url: imageItem.link))
             }
-            
-            if formattedMediaItems.count > 1{
-                print("Nothing")
-            }
         }
 
         return formattedMediaItems

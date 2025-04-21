@@ -21,11 +21,12 @@ struct FeedView: View {
             }
         } else {
             LazyVStack(spacing: 20) {
-                ForEach(viewModel.posts, id: \.id) { post in
+                ForEach(viewModel.posts.indices, id: \.self) { index in
+                    let post = viewModel.posts[index]
                     PostView(postv2: post)
                         .padding(.top, 2)
                         .onAppear {
-                            viewModel.fetchMoreItemsIfNeeded(currentPost: post)
+                            viewModel.fetchMoreItemsIfNeeded(currentId: post.id)
                         }
                 }
             }

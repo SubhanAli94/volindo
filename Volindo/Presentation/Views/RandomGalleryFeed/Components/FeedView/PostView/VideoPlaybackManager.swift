@@ -2,12 +2,6 @@ import SwiftUI
 import AVKit
 import Combine
 
-struct VisibilityPreferenceKey: PreferenceKey {
-    static let defaultValue: [UUID: CGFloat] = [:]
-    static func reduce(value: inout [UUID: CGFloat], nextValue: () -> [UUID: CGFloat]) {
-        value.merge(nextValue(), uniquingKeysWith: { $1 })
-    }
-}
 
 final class PlaybackManager: ObservableObject {
     static let shared = PlaybackManager()
@@ -28,7 +22,7 @@ final class PlaybackManager: ObservableObject {
             guard let self = self else { return }
             self.players[id] = player
             if self.players.count == 1 {
-                self.playPlayer(for: id) // Use helper method
+                self.playPlayer(for: id)
             }
         }
     }
@@ -36,21 +30,21 @@ final class PlaybackManager: ObservableObject {
     func unregister(id: UUID) {
         playerQueue.async { [weak self] in
             guard let self = self else { return }
-            self.pausePlayer(for: id)  // Use helper method
+            self.pausePlayer(for: id)
             self.players.removeValue(forKey: id)
         }
     }
 
     func updateVisibility(_ vis: [UUID: CGFloat]) {
-        playerQueue.async { [weak self] in //update on the queue
+        playerQueue.async { [weak self] in
             guard let self = self else { return }
             let bestEntry = vis.max { $0.value < $1.value }
             let bestID = bestEntry?.key
             let bestVisibility = bestEntry?.value ?? 0
 
             if bestVisibility > 0.5 {
-                if self.mostVisiblePlayerID != bestID { // Only update if different
-                    self.mostVisiblePlayerID = bestID //update on main thread
+                if self.mostVisiblePlayerID != bestID {
+                    self.mostVisiblePlayerID = bestID
                     self.handlePlayback()
                 }
             } else if self.mostVisiblePlayerID != nil{
@@ -61,7 +55,7 @@ final class PlaybackManager: ObservableObject {
     }
 
     private func handlePlayback() {
-        DispatchQueue.main.async { //switch to main
+        DispatchQueue.main.async {
             self.players.forEach { id, player in
                 if id == self.mostVisiblePlayerID {
                     self.playPlayer(for: id)
@@ -74,12 +68,16 @@ final class PlaybackManager: ObservableObject {
 
     private func playPlayer(for id: UUID) {
         guard let player = players[id] else { return }
-        player.play()
-        player.isMuted = false
+        DispatchQueue.main.async {
+            player.play()
+            player.isMuted = false
+        }
     }
 
     private func pausePlayer(for id: UUID) {
         guard let player = players[id] else { return }
-        player.pause()
+        DispatchQueue.main.async {
+            player.pause()
+        }
     }
 }

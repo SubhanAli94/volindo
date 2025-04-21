@@ -7,7 +7,6 @@ class RandomGalleryFeedViewModel: ObservableObject {
     @Published var posts: [PostResponse] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
-    @Published var hasMore = true
     @Published var visiblePostIDs = Set<String>()
     
     @Published private(set) var stories: [Story] = []
@@ -49,20 +48,20 @@ class RandomGalleryFeedViewModel: ObservableObject {
             } receiveValue: { [weak self] newPosts in
                 guard let self = self else { return }
                 self.posts.append(contentsOf: newPosts)
-                self.hasMore = !newPosts.isEmpty
-                //TODO: prefetchMedia for new posts
+#if DEBUG
+                print(posts.count)
+#endif
             }
             .store(in: &cancellables)
     }
     
-    func fetchMoreItemsIfNeeded(currentPost: PostResponse) {
-        guard let currentIndex = posts.firstIndex(where: { $0.id == currentPost.id }) else {
+    func fetchMoreItemsIfNeeded(currentId: String) {
+        guard let currentIndex = posts.firstIndex(where: { $0.id == currentId }) else {
             return
         }
         
-        if( currentIndex >= posts.count - prefetchThreshold){
+        if(currentIndex >= posts.count - prefetchThreshold){
             fetchRandomMedia()
-            print(posts.count)
         }
         
     }

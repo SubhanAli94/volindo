@@ -4,13 +4,8 @@ import AVKit
 struct PostMediaView: View {
     let mediaContents: [MediaContent]
     let id = UUID()
-    @State private var player: AVPlayer!
-    
-    @State private var frameInScroll: CGRect = .zero
-    
+        
     @State private var currentIndex: Int = 0
-    
-    @State private var isMuted = true
     
     
     var body: some View {
@@ -84,5 +79,12 @@ struct PostMediaView: View {
         else { return 0 }
         let intersection = frame.intersection(scrollFrame)
         return intersection.height / frame.height
+    }
+}
+
+struct VisibilityPreferenceKey: PreferenceKey {
+    static let defaultValue: [UUID: CGFloat] = [:]
+    static func reduce(value: inout [UUID: CGFloat], nextValue: () -> [UUID: CGFloat]) {
+        value.merge(nextValue(), uniquingKeysWith: { $1 })
     }
 }

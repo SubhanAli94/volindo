@@ -6,7 +6,9 @@ extension Story {
 
 private func fetchStories() -> [Story] {
     guard let url = Bundle.main.url(forResource: "StoriesMock", withExtension: "json") else {
+#if DEBUG
         print("Error: Could not find StoriesMock.json")
+#endif
         return []
     }
 
@@ -16,7 +18,9 @@ private func fetchStories() -> [Story] {
         let response = try decoder.decode([Story].self, from: data)
         return response
     } catch {
+#if DEBUG
         print("Error decoding JSON: \(error)")
+#endif
         return []
     }
 }
